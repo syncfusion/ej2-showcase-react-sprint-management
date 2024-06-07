@@ -5,7 +5,7 @@ node('EJ2Angularlatest') {
         deleteDir()
 
         stage('Import') {
-            git url: 'http://github.com/syncfusion/ej2-groovy-scripts.git', branch: 'master', credentialsId: env.GithubCredentialID;
+            git url: 'http://github.com/essential-studio/ej2-groovy-scripts.git', branch: 'master', credentialsId: env.GithubCredentialID;
             shared = load 'src/shared.groovy'
         }
 
