@@ -34,6 +34,7 @@ export const Home = () => {
     bindTabClickEvent();
     bindEventListeners();
     bindScrollEvent();
+    adjustElementHeight()
     function handleResize() {
       if (window.innerWidth < 500) {
         document.getElementsByClassName('component-contain')[0].classList.remove('add-overflow');
