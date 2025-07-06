@@ -149,6 +149,11 @@ export const Home = () => {
     else {
       document.getElementById('component-render-grid').style.height = (desiredHeight -87.5)+ 'px';
     }
+    if (desiredHeight > 1645) {
+      kanbanObj.current.height = Math.floor((desiredHeight - 20)) + 'px'
+    } else {
+      kanbanObj.current.height = Math.floor((desiredHeight - 13)) + 'px'
+    }
   }
 
   const updateDataSourceObject = (dataSource: any, id: any, updateData: any) => {
@@ -721,6 +726,7 @@ export const Home = () => {
     if (Array.isArray(instance.current.dataSource)) {
       switch (projectValue) {
         case 'Project1':
+          window.sprintData1 = [...window.sprintData1];
           window.sprintData1.push(storeNewRecord);
           break;
         case 'Project2':
@@ -1174,7 +1180,7 @@ export const Home = () => {
       //  errorMessage.style.display = 'block';
         row.appendChild(errorMessage);
         formElement.insertBefore(row, formElement.firstChild);
-        const buttonElement = document.querySelector('.e-schedule-dialog.e-control.e-btn.e-lib.e-primary.e-event-save.e-flat') as HTMLButtonElement;
+        const buttonElement = document.querySelector('.e-schedule-dialog.e-control.e-btn.e-lib.e-primary.e-event-save') as HTMLButtonElement;
         let dropDownList = new DropDownList({
           dataSource: [
             { text: 'Open', value: 'Open' },
@@ -1273,7 +1279,7 @@ export const Home = () => {
         errorMessage.style.display = 'none'; // Initially hide the error message
         inputEle.addEventListener('focusout', function (event) {
           const schedulerStatusElement: any = document.getElementsByClassName('custom-field-row')[0].querySelector('input')
-          const buttonElement = document.querySelector('.e-schedule-dialog.e-control.e-btn.e-lib.e-primary.e-event-save.e-flat') as HTMLButtonElement;
+          const buttonElement = document.querySelector('.e-schedule-dialog.e-control.e-btn.e-lib.e-primary.e-event-save') as HTMLButtonElement;
           let enteredValue = parseInt(inputEle.value, 10);
           if (enteredValue < 0) {
             inputEle.value = '0'; // Set value as string '0'

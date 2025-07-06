@@ -514,9 +514,6 @@ body, html {
     #component-render-gantt {
         width: 92vw !important;
     }
-    /* #component-render-grid {
-        height: 80% !important;
-    } */
   }
   
   @media only screen and (min-width: 1900px) {
@@ -541,9 +538,6 @@ body, html {
         height :54vh;
         max-height: 54vh; /* Set max-height to 70% of viewport height */
     }
-    /* #component-render-grid {
-        height: 70% !important;
-    } */
   }
   @media (min-width: 800px) and (max-width: 855px) {
     .inner-cadr {
@@ -584,9 +578,6 @@ body, html {
         height :54vh;
         max-height: 54vh; /* Set max-height to 70% of viewport height */
     }
-    /* #component-render-grid {
-        height: 63% !important;
-    } */
     .navimage-kanban,.navimage-scheduler,.navimage-gantt,.navimage-grid {
         width: 16px;
         height: 16px;
